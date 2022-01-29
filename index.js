@@ -4,7 +4,7 @@ const https = require("https")
 const http = require("http")
 
 const app = express()
-const port = 8080
+const port = 80
 
 app.use(express.static("public"))
 
