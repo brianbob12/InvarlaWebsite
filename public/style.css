@@ -1,0 +1,32 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+  position: absolute;
+}
+main{
+  z-index: 0;
+}
+#Content{
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+#Title{
+  color:white;
+  font-size: 60px;
+  font-family:'Biryani', sans-serif ;
+  text-align: center;
+  margin-top: 15%;
+}
+.titleLetter{
+  float: left;
+  visibility: hidden;
+}
+.titleWord{
+  display: inline-block;
+  padding-right: 2%;
+}
