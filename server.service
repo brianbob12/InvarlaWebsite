@@ -1,0 +1,14 @@
+[Unit]
+Description=InvarlaWebsite
+
+[Service]
+ExecStart=/home/ubuntu/InvarlaWebsite/index.js
+Restart=always
+User=nobody
+Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/home/ubuntu/InvarlaWebsite
+
+[Install]
+WantedBy=multi-user.target
