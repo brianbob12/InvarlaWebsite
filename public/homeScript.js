@@ -1,7 +1,12 @@
+
 var letters = document.getElementsByClassName("titleLetter")
 var letterDelay = 65//in miliseconds
 var letterIndex = 0
 startSloganAnimation()
+
+window.addEventListener("load", () => {
+  document.getElementById("Title").style.marginTop = window.innerHeight * 0.2 + "px"
+})
 
 function startSloganAnimation() {
   if (letters.length == 0) {

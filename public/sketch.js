@@ -1,5 +1,5 @@
-const sizeX = window.innerWidth
-const sizeY = window.innerHeight
+var sizeX = window.innerWidth
+var sizeY = window.innerHeight
 
 var myBoids = []
 
@@ -11,6 +11,13 @@ var frameNum = 0;
 var hideBoids = true
 
 var n = 100
+
+window.addEventListener("resize", () => {
+  sizeX = window.innerWidth
+  sizeY = window.innerHeight
+  reset()
+  setup()
+})
 
 function setup() {
   createCanvas(sizeX, sizeY);
@@ -70,14 +77,7 @@ function pause() {
 
 function reset() {
   myBoids = []
-  try {
-    generateBoids(int(numBoidsInput.value()))
-  }
-  catch {
-    generateBoids(n)
-  }
-  drawConnectionsCheckbox.value(false)
-  debugCheckbox.value(false)
+  generateBoids(n)
 }
 
 function toggleShowConnections() {

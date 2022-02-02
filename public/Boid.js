@@ -285,8 +285,9 @@ class Boid {
       else {
         connectionData.last = frameNum
         age = frameNum - connectionData.first
-        const sigmoid255 = 255 / (1 + Math.exp(-0.001 * age))
-        tad.color = [sigmoid255, 0, 255 - sigmoid255]
+        const sigmoid255 = 255 / (1 + Math.exp(-0.003 * age))
+        const sigmoid255Slow = 255 / (1 + Math.exp(-0.0003 * age))
+        tad.color = [sigmoid255Slow, 0, 255 - sigmoid255]
       }
     }
     else {
